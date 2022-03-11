@@ -526,6 +526,7 @@ footer span a:hover{
     }
     .jurusan .jurusan-content .card{
         width: calc(50% - 10px);
+        height: 550px;
         margin-bottom: 20px;
     }
 }
