@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var video = document.getElementById('background-video');
+	video.play();
 
 	$(window).scroll(function () {
 		// sticky navbar on scroll script
