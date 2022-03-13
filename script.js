@@ -1,6 +1,8 @@
 $(document).ready(function () {
-    var video = document.getElementById('background-video');
-	video.play();
+	var video = document.getElementById('background-video');
+	setTimeout(function () {
+		video.play();
+	}, 1000);
 
 	$(window).scroll(function () {
 		// sticky navbar on scroll script
@@ -26,12 +28,12 @@ $(document).ready(function () {
 			$('.scroll-up-btn').removeClass('show');
 		}
 
-        // auto pause video on scroll script
-        if (this.scrollY > 950) {
-            video.pause();
-        } else {
-            video.play();
-        }
+		// auto pause video on scroll script
+		if (this.scrollY > 950) {
+			video.pause();
+		} else {
+			video.play();
+		}
 	});
 
 	// play-pause script
@@ -49,7 +51,11 @@ $(document).ready(function () {
 	});
 
 	// set footer
-	$('#footer').html('<p><i class="fa-regular fa-copyright"></i> ' + new Date().getFullYear() + ' <a href="https://github.com/Tiramitzu">Syah Warid Ghani Akram</a>. all rights reserved.</p>');
+	$('#footer').html(
+		'<p><i class="fa-regular fa-copyright"></i> ' +
+			new Date().getFullYear() +
+			' <a href="https://github.com/Tiramitzu">Syah Warid Ghani Akram</a>. all rights reserved.</p>'
+	);
 
 	// slide-up script
 	$('.scroll-up-btn').click(function () {
