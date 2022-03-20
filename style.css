@@ -451,7 +451,7 @@ footer span a:hover {
 		flex: 100%;
 	}
 }
-@media (max-width: 1000px) {
+@media (max-width: 1170px) {
 	.menu-btn {
 		display: block;
 		z-index: 999;
@@ -489,7 +489,7 @@ footer span a:hover {
 		height: 100%;
 	}
 }
-@media (max-width: 947px) {
+@media (max-width: 960px) {
 	.menu-btn {
 		display: block;
 		z-index: 999;
