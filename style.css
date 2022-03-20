@@ -268,6 +268,11 @@ section .title::after {
 }
 
 /* sejarah section styling */
+#sejarah-video {
+	min-height: 298px;
+	object-fit: contain;
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
 .sejarah {
 	background: #fff;
 	padding: 100px 0;
@@ -279,10 +284,11 @@ section .title::after {
 	width: 50%;
 }
 .sejarah .sejarah-content .left video {
-	height: 300px;
+	height: 298px;
 	width: 530px;
-	object-fit: fill;
+	object-fit: contain;
 	border-radius: 6px;
+
 }
 .sejarah .sejarah-content .right {
 	width: 50%;
@@ -424,6 +430,7 @@ section .title::after {
 }
 /* footer section styling */
 footer {
+	font-size: 17px;
 	background: #111;
 	padding: 15px 23px;
 	color: #fff;
@@ -431,6 +438,7 @@ footer {
 }
 footer span a {
 	color: crimson;
+	font-weight: bolder;
 	text-decoration: none;
 }
 footer span a:hover {
@@ -542,7 +550,9 @@ footer span a:hover {
 		height: 600px;
 		margin-bottom: 20px;
 	}
-	.visi-misi .title, .jurusan .title, .sejarah .title {
+	.visi-misi .title,
+	.jurusan .title,
+	.sejarah .title {
 		font-size: 50px;
 	}
 	.sejarah .sejarah-content .right p {
@@ -551,12 +561,13 @@ footer span a:hover {
 	.visi-misi .vimi-content h2 {
 		font-size: 30px;
 	}
-	.visi-misi .vimi-content p, ul li  {
+	.visi-misi .vimi-content p,
+	ul li {
 		font-size: 20px;
 	}
 	.jurusan .jurusan-content .card .box .text {
 		padding: 5px;
-		font-size: 30px
+		font-size: 30px;
 	}
 	.jurusan .jurusan-content .card .box p {
 		font-size: 20px;
