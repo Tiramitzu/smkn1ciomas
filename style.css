@@ -357,7 +357,7 @@ section .title::after {
 }
 .jurusan .jurusan-content .card {
 	width: 32%;
-	height: 450px;
+	height: 500px;
 	margin: 10px 10px 5px 5px;
 	background: #fff;
 	text-align: center;
@@ -368,6 +368,9 @@ section .title::after {
 }
 .jurusan .jurusan-content .card .box {
 	transition: all 0.3s ease;
+}
+.jurusan .jurusan-content .card .box .text {
+	padding: 15px;
 }
 .jurusan .jurusan-content .card i {
 	font-size: 50px;
@@ -478,6 +481,13 @@ footer span a:hover {
 		margin: 20px 0;
 		font-size: 25px;
 	}
+	.jurusan .jurusan-content .card {
+		height: 560px;
+		margin-bottom: 20px;
+	}
+	.jurusan .jurusan-content .card .box {
+		height: 100%;
+	}
 }
 @media (max-width: 947px) {
 	.menu-btn {
@@ -529,16 +539,35 @@ footer span a:hover {
 	}
 	.jurusan .jurusan-content .card {
 		width: calc(50% - 10px);
-		height: 550px;
+		height: 600px;
 		margin-bottom: 20px;
+	}
+	.visi-misi .title, .jurusan .title, .sejarah .title {
+		font-size: 50px;
+	}
+	.sejarah .sejarah-content .right p {
+		font-size: 20px;
+	}
+	.visi-misi .vimi-content h2 {
+		font-size: 30px;
+	}
+	.visi-misi .vimi-content p, ul li  {
+		font-size: 20px;
+	}
+	.jurusan .jurusan-content .card .box .text {
+		padding: 5px;
+		font-size: 30px
+	}
+	.jurusan .jurusan-content .card .box p {
+		font-size: 20px;
+	}
+	footer p {
+		font-size: 20px;
 	}
 }
 @media (max-width: 720px) {
 	.max-width {
 		padding: 0 23px;
-	}
-	.jurusan .jurusan-content .card {
-		width: 100%;
 	}
 }
 
