@@ -1,5 +1,6 @@
 /*  import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
 
 * {
 	margin: 0;
@@ -29,7 +30,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
-
 /* all similar content styling codes */
 section {
 	padding: 100px 0;
@@ -110,7 +110,8 @@ section .title::after {
 	display: flex;
 	color: #fff;
 	font-size: 35px;
-	font-weight: 500;
+	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
 }
 .navbar a.logo span {
 	margin-left: 1rem;
@@ -254,12 +255,20 @@ section .title::after {
 }
 .home .home-content .text-1 {
 	font-size: 50px;
-	font-weight: 600;
+	font-weight: 700;
+	font-family: 'Raleway', sans-serif;
+}
+.home .home-content .text-1 span {
+	font-size: 50px;
+	font-weight: 700;
+	color: greenyellow;
+	font-family: 'Raleway', sans-serif;
 }
 .home .home-content .text-2 {
-	font-size: 25px;
-	font-weight: 500;
+	font-size: 30px;
+	font-weight: 600;
 	margin: 5px 0;
+	font-family: 'Raleway', sans-serif;
 }
 .home .home-content a {
 	display: inline-block;
@@ -288,7 +297,7 @@ section .title::after {
 	padding: 100px 0;
 }
 .sejarah .title::after {
-	content: 'SMKN 1 Ciomas';
+	content: 'SMK N 1 Ciomas';
 }
 .sejarah .sejarah-content .left {
 	width: 50%;
@@ -298,7 +307,6 @@ section .title::after {
 	width: 530px;
 	object-fit: contain;
 	border-radius: 6px;
-
 }
 .sejarah .sejarah-content .right {
 	width: 50%;
@@ -454,6 +462,9 @@ footer span a {
 footer span a:hover {
 	text-decoration: underline;
 }
+footer p {
+	font-size: 20px;
+}
 
 /* responsive media query start */
 @media (max-width: 1235px) {
@@ -470,7 +481,6 @@ footer span a:hover {
 		width: 530px;
 		object-fit: contain;
 		border-radius: 6px;
-	
 	}
 	.sejarah .sejarah-content .right {
 		flex: 100%;
@@ -527,15 +537,15 @@ footer span a:hover {
 		position: fixed;
 		height: 100vh;
 		width: 100%;
-		left: -100%;
-		top: 0;
+		left: 0;
+		top: -100%;
 		background: #111;
 		text-align: center;
 		padding-top: 80px;
 		transition: all 0.3s ease;
 	}
 	.navbar .menu.active {
-		left: 0;
+		top: 0;
 	}
 	.navbar .menu li {
 		display: block;
@@ -565,7 +575,6 @@ footer span a:hover {
 		width: 530px;
 		object-fit: contain;
 		border-radius: 6px;
-	
 	}
 	.sejarah .sejarah-content .right {
 		flex: 100%;
@@ -601,21 +610,22 @@ footer span a:hover {
 		width: 450px;
 		object-fit: contain;
 		border-radius: 6px;
-	
 	}
 	#sejarah-video {
 		min-height: 253px;
 		object-fit: contain;
 		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 	}
-	footer p {
-		font-size: 20px;
-	}
 }
 @media (max-width: 883px) {
 	.jurusan .jurusan-content .card {
-		width: calc(100% - 10px);
-		height: 470px;
+		height: 550px;
+	}
+}
+@media (max-width: 800px) {
+	.jurusan .jurusan-content .card {
+		width: calc(100% - 200px);
+		height: fit-content;
 		margin-bottom: 20px;
 	}
 }
@@ -623,8 +633,23 @@ footer span a:hover {
 	.max-width {
 		padding: 0 23px;
 	}
+	.jurusan .jurusan-content .card {
+		width: calc(100% - 100px);
+		height: fit-content;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 590px) {
 	footer p {
 		font-size: 15px;
+		font-weight: bolder;
+	}
+}
+@media (max-width: 565px) {
+	.jurusan .jurusan-content .card {
+		width: calc(100% - 50px);
+		height: fit-content;
+		margin-bottom: 20px;
 	}
 }
 
@@ -638,7 +663,6 @@ footer span a:hover {
 		width: 450px;
 		object-fit: contain;
 		border-radius: 6px;
-	
 	}
 	#sejarah-video {
 		min-height: 253px;
@@ -655,5 +679,15 @@ footer span a:hover {
 		width: 35px;
 		font-size: 23px;
 		line-height: 38px;
+	}
+	.jurusan .jurusan-content .card {
+		width: calc(100% - 25px);
+		height: fit-content;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 460px) {
+	footer p {
+		font-size: 12px;
 	}
 }

@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 	$(window).scroll(function () {
 		// sticky navbar on scroll script
-		if (this.scrollY > 325) {
+		if (this.scrollY > 350) {
 			$('.navbar').addClass('sticky');
 			$('.menu').addClass('sticky');
 		} else {
