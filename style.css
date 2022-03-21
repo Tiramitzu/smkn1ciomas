@@ -570,11 +570,6 @@ footer span a:hover {
 	.sejarah .sejarah-content .right {
 		flex: 100%;
 	}
-	.jurusan .jurusan-content .card {
-		width: calc(100% - 100px);
-		height: 600px;
-		margin-bottom: 20px;
-	}
 	.visi-misi .title,
 	.jurusan .title,
 	.sejarah .title {
@@ -590,12 +585,16 @@ footer span a:hover {
 	ul li {
 		font-size: 20px;
 	}
+	.jurusan .jurusan-content .card {
+		height: 470px;
+		margin-bottom: 20px;
+	}
 	.jurusan .jurusan-content .card .box .text {
 		padding: 5px;
-		font-size: 30px;
+		font-size: 25px;
 	}
 	.jurusan .jurusan-content .card .box p {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.sejarah .sejarah-content .left video {
 		height: 253px;
@@ -613,9 +612,19 @@ footer span a:hover {
 		font-size: 20px;
 	}
 }
+@media (max-width: 883px) {
+	.jurusan .jurusan-content .card {
+		width: calc(100% - 10px);
+		height: 470px;
+		margin-bottom: 20px;
+	}
+}
 @media (max-width: 720px) {
 	.max-width {
 		padding: 0 23px;
+	}
+	footer p {
+		font-size: 15px;
 	}
 }
 
@@ -646,8 +655,5 @@ footer span a:hover {
 		width: 35px;
 		font-size: 23px;
 		line-height: 38px;
-	}
-	footer p {
-		font-size: 15px;
 	}
 }
