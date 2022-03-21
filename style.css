@@ -11,6 +11,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+.overflow-hidden {
+	overflow: hidden;
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -133,7 +137,7 @@ section .title::after {
 }
 .navbar .menu li a {
 	display: block;
-	color: fff;
+	color: white;
 	font-size: 18px;
 	font-weight: 500;
 	margin-left: 25px;
@@ -144,6 +148,9 @@ section .title::after {
 }
 .navbar .menu.sticky li a {
 	color: black;
+}
+.navbar .menu.sticky.active li a {
+	color: white;
 }
 .navbar.sticky .menu li a:hover {
 	color: crimson;
@@ -158,6 +165,9 @@ section .title::after {
 }
 .navbar.sticky .menu-btn {
 	color: black;
+}
+.navbar.sticky .menu-btn.active {
+	color: white;
 }
 .scroll-up-btn {
 	position: fixed;
@@ -368,7 +378,7 @@ section .title::after {
 	background: #fff;
 	text-align: center;
 	border-radius: 6px;
-	padding: 70px 30px;
+	padding: 30px 30px;
 	transition: all 0.3s ease;
 	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
@@ -455,6 +465,13 @@ footer span a:hover {
 		justify-content: center;
 		margin: 0 auto 60px;
 	}
+	.sejarah .sejarah-content .left video {
+		height: 298px;
+		width: 530px;
+		object-fit: contain;
+		border-radius: 6px;
+	
+	}
 	.sejarah .sejarah-content .right {
 		flex: 100%;
 	}
@@ -471,15 +488,15 @@ footer span a:hover {
 		position: fixed;
 		height: 100vh;
 		width: 100%;
-		left: -100%;
-		top: 0;
+		left: 0;
+		top: -100%;
 		background: #111;
 		text-align: center;
 		padding-top: 80px;
 		transition: all 0.3s ease;
 	}
 	.navbar .menu.active {
-		left: 0;
+		top: 0;
 	}
 	.navbar .menu li {
 		display: block;
@@ -490,7 +507,8 @@ footer span a:hover {
 		font-size: 25px;
 	}
 	.jurusan .jurusan-content .card {
-		height: 560px;
+		width: calc(50% - 20px);
+		height: 380px;
 		margin-bottom: 20px;
 	}
 	.jurusan .jurusan-content .card .box {
@@ -542,11 +560,18 @@ footer span a:hover {
 		justify-content: center;
 		margin: 0 auto 60px;
 	}
+	.sejarah .sejarah-content .left video {
+		height: 298px;
+		width: 530px;
+		object-fit: contain;
+		border-radius: 6px;
+	
+	}
 	.sejarah .sejarah-content .right {
 		flex: 100%;
 	}
 	.jurusan .jurusan-content .card {
-		width: calc(50% - 10px);
+		width: calc(100% - 100px);
 		height: 600px;
 		margin-bottom: 20px;
 	}
@@ -572,6 +597,18 @@ footer span a:hover {
 	.jurusan .jurusan-content .card .box p {
 		font-size: 20px;
 	}
+	.sejarah .sejarah-content .left video {
+		height: 253px;
+		width: 450px;
+		object-fit: contain;
+		border-radius: 6px;
+	
+	}
+	#sejarah-video {
+		min-height: 253px;
+		object-fit: contain;
+		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	}
 	footer p {
 		font-size: 20px;
 	}
@@ -587,6 +624,18 @@ footer span a:hover {
 	.skills .skills-content .left .text {
 		font-size: 19px;
 	}
+	.sejarah .sejarah-content .left video {
+		height: 253px;
+		width: 450px;
+		object-fit: contain;
+		border-radius: 6px;
+	
+	}
+	#sejarah-video {
+		min-height: 253px;
+		object-fit: contain;
+		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	}
 	.right form .error-box {
 		width: 150px;
 	}
@@ -597,5 +646,8 @@ footer span a:hover {
 		width: 35px;
 		font-size: 23px;
 		line-height: 38px;
+	}
+	footer p {
+		font-size: 15px;
 	}
 }

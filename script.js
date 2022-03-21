@@ -1,5 +1,7 @@
 $(document).ready(function () {
+	var playPause = document.getElementsByClassName('play-pause-btn')[0];
 	var video = document.getElementById('background-video');
+	var html = document.getElementsByTagName('html')[0];
 	setTimeout(function () {
 		video.play();
 	}, 1000);
@@ -16,9 +18,11 @@ $(document).ready(function () {
 
 		// play-pause button show/hide script
 		if (this.scrollY > 10) {
-			$('.play-pause-btn').addClass('hide');
+			playPause.classList.add('hide');
+			playPause.classList.add('shide');
 		} else {
-			$('.play-pause-btn').removeClass('hide');
+			playPause.classList.remove('hide');
+			playPause.classList.remove('shide');
 		}
 
 		// scroll-up button show/hide script
@@ -31,21 +35,22 @@ $(document).ready(function () {
 		// auto pause video on scroll script
 		if (this.scrollY > 950) {
 			video.pause();
-		} else {
+		} else if (this.scrollY < 950 && $('.pause').length) {
+			return;
+		} else if (this.scrollY < 950 && !$('.pause').length) {
 			video.play();
 		}
 	});
 
 	// play-pause script
-	var playPause = document.getElementsByClassName('play-pause-btn')[0];
 	playPause.addEventListener('click', function () {
 		if (video.paused) {
 			video.play();
-			playPause.classList.toggle('pause');
+			playPause.classList.remove('pause');
 			playPause.innerHTML = '<i class="fa-solid fa-pause"></i>';
 		} else {
 			video.pause();
-			playPause.classList.toggle('pause');
+			playPause.classList.add('pause');
 			playPause.innerHTML = '<i class="fa-solid fa-play"></i>';
 		}
 	});
@@ -66,15 +71,35 @@ $(document).ready(function () {
 
 	$('.navbar .menu li a').click(function () {
 		// applying again smooth scroll on menu items click
-		$('html').css('scrollBehavior', 'smooth');
+		if (!html.classList.contains('overflow-hidden')) {
+			$('html').remove('overflow-hidden');
+			$('html').css('scrollBehavior', 'smooth');
+		} else {
+			$('html').css('scrollBehavior', 'smooth');
+		}
 	});
 
 	// toggle menu/navbar script
 	$('.menu-btn').click(function () {
 		$('.navbar .menu').toggleClass('active');
 		$('.menu-btn i').toggleClass('active');
-		$('.play-pause-btn').toggleClass('hide');
+		$('.menu-btn').toggleClass('active');
+		if (playPause.classList.contains('shide')) {
+			return;
+		} else if (!playPause.classList.contains('shide') && playPause.classList.contains('hide')) {
+			playPause.classList.remove('hide');
+		} else if (!playPause.classList.contains('shide') && !playPause.classList.contains('hide')) {
+			playPause.classList.add('hide');
+		}
 	});
+	$('.menu-btn').click(function () {
+		if (html.classList.contains('overflow-hidden')) {
+			html.classList.remove('overflow-hidden');
+			
+		} else {
+			html.classList.add('overflow-hidden');
+		}
+	})
 
 	// owl carousel script
 	$('.carousel').owlCarousel({
