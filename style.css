@@ -163,11 +163,11 @@ section .title::after {
 	cursor: pointer;
 	display: none;
 }
-.navbar.sticky .menu-btn {
-	color: black;
-}
 .navbar.sticky .menu-btn.active {
 	color: white;
+}
+.navbar.sticky .menu-btn {
+	color: black;
 }
 .scroll-up-btn {
 	position: fixed;
